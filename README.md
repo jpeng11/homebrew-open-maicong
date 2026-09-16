@@ -7,13 +7,13 @@
 ## 安装（Apple Silicon）
 
 ```bash
-brew install --cask --no-quarantine jpeng11/open-maicong/maicong-studio
+brew install --cask jpeng11/open-maicong/maicong-studio
 ```
 
-当前包未签名。`--no-quarantine` 避免 Gatekeeper 隔离。若仍拦截：系统设置 → 隐私与安全性 → 仍要打开。
+当前包未签名。cask 安装时会去掉 Gatekeeper 隔离属性。若仍拦截：系统设置 → 隐私与安全性 → 仍要打开。
 
 ```bash
-brew upgrade --cask --no-quarantine maicong-studio
+brew upgrade --cask maicong-studio
 brew uninstall --cask maicong-studio
 brew uninstall --cask --zap maicong-studio
 ```
@@ -29,9 +29,9 @@ brew uninstall --cask --zap maicong-studio
 Homebrew tap for [Maicong Studio](https://github.com/jpeng11/open-maicong), an unofficial offline macOS hub for the MCHOSE G75 V2 mechanical keyboard.
 
 ```bash
-brew install --cask --no-quarantine jpeng11/open-maicong/maicong-studio
+brew install --cask jpeng11/open-maicong/maicong-studio
 ```
 
-The current build is unsigned. Use `--no-quarantine`, or allow it in System Settings → Privacy & Security after the first open.
+The current build is unsigned. The cask clears Gatekeeper quarantine on install. If it is still blocked: System Settings → Privacy & Security → Open Anyway.
 
 Keep `Casks/maicong-studio.rb` in sync with the copy in the [upstream repo](https://github.com/jpeng11/open-maicong/blob/main/Casks/maicong-studio.rb) when cutting a release.
